@@ -9,12 +9,12 @@
 <body>
 	<table border="1" align="center">
 		<tr>
-			<td colspan="3">Users</td>
+			<td colspan="3" align="center">Users</td>
 		</tr>
 		<tr>
 			<th>ID</th>
-			<th></th>
-			<th></th>
+			<th>NAME</th>
+			<th>USER TYPE</th>
 		</tr>
 		<?php
 		$myfile = fopen('user.txt', 'r');
@@ -26,19 +26,18 @@
 				$user = explode('|', $data);
 	
 				echo '<tr>
-					<td>' . ++$counter . '</td>
 					<td>' . $user[0] . '</td>
 					<td>' . $user[1] . '</td>
 					<td>' . $user[2] . '</td>
-					<td>
-						<a href="edit.php?id='.$counter.'"> EDIT</a> |
-						<a href="delete.php?id='.$counter.'"> DELETE</a>
-					</td>
-				</tr>';
+				    </tr>';			
 			}
 		}
 		fclose($myfile);
 		?>
+		<td colspan="3" align="right">
+						<a href="adminIndex.php"> Go Home </a> 
+					</td>
+				</tr>
 	</table>
 </body>
 

@@ -12,8 +12,8 @@
 <body>
 	<center>
 	<h1>Welcome Bob!</h1>
-	<a href="profile.php"> Profile</a> <br>
-	<a href="userlist.php"> Change Password</a> <br>
+	<a href="profile.php"> Profile </a> <br>
+	<a href="changepw.php"> Change Password</a> <br>
 	<a href="userlist.php"> View Users </a> <br>
 	<a href="logout.php"> logout </a>
 	</center>
