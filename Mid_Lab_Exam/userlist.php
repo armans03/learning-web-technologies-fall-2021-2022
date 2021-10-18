@@ -27,8 +27,8 @@
 	
 				echo '<tr>
 					<td>' . $user[0] . '</td>
-					<td>' . $user[1] . '</td>
 					<td>' . $user[2] . '</td>
+					<td>' . $user[3] . '</td>
 				    </tr>';			
 			}
 		}

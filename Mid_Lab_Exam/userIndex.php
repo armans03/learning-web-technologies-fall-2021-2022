@@ -1,6 +1,9 @@
-<?php 
+<?php
 	session_start();
-	if(isset($_COOKIE['flag'])){
+
+	if(!isset($_COOKIE['user'])){  
+		header("location: Login.php");
+	}
 ?>
 
 <!DOCTYPE html>
@@ -11,16 +14,10 @@
 </head>
 <body>
 	<center>
-	<h1>Welcome Anne!</h1>
+	<h1>Welcome <?= $_COOKIE['userName'] ?></h1>
 	<a href="profile.php"> Profile </a> <br>
 	<a href="changepw.php"> Change Password</a> <br>
 	<a href="logout.php"> logout </a>
 	</center>
 </body>
 </html>
-
-<?php
-	}else{
-		header('location: login.html');
-	}
-?>

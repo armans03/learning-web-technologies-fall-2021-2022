@@ -12,13 +12,22 @@
 				while (!feof($myfile)) {
 					$data = fgets($myfile);
 					$user = explode('|', $data);
-					if (trim($user[3]) == "User") {
-					if(trim($user[0]) == $userid && trim($user[1]) == $password){
-						setcookie('flag', 'true', time()+3600, '/');
+
+					if(trim($user[3]) == "User" && trim($user[0]) == $userid && trim($user[1]) == $password){
+						setcookie('user', 'true', time()+3600, '/');
+						setcookie('userId',$userid,time()+3600,'/');
+                        setcookie('userName',$user[2],time()+3600,'/');
+                        setcookie('userType',$user[3],time()+3600,'/');
+
 						header('location: userIndex.php');
 					}
-				}elseif (trim($user[0]) == $userid && trim($user[1]) == $password) {
-					setcookie('flag', 'true', time()+3600, '/');
+				elseif (trim($user[3]) == "Admin" && trim($user[0]) == $userid && trim($user[1]) == $password) {
+					setcookie('user', 'true', time()+3600, '/');
+					    setcookie('userId',$userid,time()+3600,'/');
+                        setcookie('userName',$user[2],time()+3600,'/');
+                        setcookie('userType',$user[3],time()+3600,'/');
+
+
 						header('location: adminIndex.php');
 				}
 			}

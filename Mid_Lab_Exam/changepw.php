@@ -1,54 +1,43 @@
 <?php
-$myfile = fopen('user.txt', 'r');
-$counter = 0;
+    session_start();
 
-while (!feof($myfile)) {
-    $data = fgets($myfile);
-    if ($data != "") {
-        $user = explode('|', $data);
-        if (++$counter == $id) {
-            echo '
+    if(!isset($_COOKIE['user'])){  
+        header("location: Login.php");
+    }
+?>
+
             <html>
                 <body>
-                    <form method="post" action="changepwcheck.php?id=' . $id . '">
+                    <form method="post" action="changepwcheck.php">
                         <fieldset>
                             <legend>CHANGE PASSWORD</legend>
                             <table>
                                 <tr>
                                     <td>Current Password:</td>
-                                    <td><input type="password" name="password" value="' . $user[1] . '"></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="password" name="password" value="' . $user[1] . '"></td>
+                                    <td><input type="password" name="currentpw" value=""></td>
                                 </tr>
                                 <tr>
                                     <td> New Password:</td>
                                 </tr>
                                  <tr>
-                                    <td><input type="password" name="password" value="' . $user[1] . '"></td>
+                                    <td><input type="password" name="newpw" value=""></td>
                                 </tr>
                                 <tr>
-                                    <td> New Password:</td>
+                                    <td> Retype New Password:</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="password" name="password" value="' . $user[1] . '"></td>
+                                    <td><input type="password" name="repw" value=""></td>
                                 </tr>
 
 
                                 <tr>
-                                    <td><input type="submit" name="submit" value="Submit"></td>
-                                    <td><a href="adminIndex.php">Home</a></td>
+                                    <td><hr><input type="submit" name="submit" value="Submit"></td>
+                                    <td><br><a href="adminIndex.php">Home</a></td>
                                 </tr>
                             </table>
                         </fieldset>
                     </form>
                 </body>
             </html>
-            ';
-        }
-    }
-}
-
-
-fclose($myfile);
-?>
