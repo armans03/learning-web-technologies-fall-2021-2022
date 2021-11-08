@@ -2,7 +2,7 @@
 	require_once('db.php');
 
 
-	function validate($username, $password){
+	/*function validate($username, $password){
 		$con = getConnection();
 		$sql= "select * from products where username='{$username}' and password='{$password}'";
 		$result = mysqli_query($con, $sql);
@@ -13,7 +13,7 @@
 		}else{
 			return false;
 		}
-	}
+	}*/
 
 	function addProduct($user){
 		$con = getConnection();
@@ -43,7 +43,7 @@
 
 	function editProduct($user){
 		$con = getConnection();
-		$sql= "update products set name='{$user['username']}', buying price='{$user['bprice']}', selling price='{$user['sprice']}', displayable='{$user['type']}' where id={$user['id']}";
+		$sql= "update products set name='{$user['username']}', bprice='{$user['bprice']}', sprice='{$user['sprice']}', displayable='{$user['type']}' where id={$user['id']}";
 		
 		if(mysqli_query($con, $sql)){
 			return true;
@@ -52,7 +52,7 @@
 		}
 	}
 
-	function deleteUser($id){
+	function deleteProduct($id){
 		$con = getConnection();
 		$sql= "delete from products where id={$id}";
 		
@@ -62,5 +62,24 @@
 			return false;
 		}
 	}
+
+	function getProductByName($name){
+		$con = getConnection();
+		$sql= "select * from products where name like '%$name%' and displayable='Yes'";
+		$result = mysqli_query($con, $sql);
+		//$user = mysqli_fetch_assoc($result);
+		return $result;
+	}
+
+	/*function deleteUser($id){
+		$con = getConnection();
+		$sql= "delete from products where id={$id}";
+		
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}*/
 
 ?>

@@ -19,6 +19,7 @@
 				if($_POST['sprice'] != ""){
 					if ($type == "display"){
 						$user = [
+							    'id' => $id,
 								'username'=> $username, 
 								'bprice'=>$bprice, 
 								'sprice'=> $sprice, 
@@ -28,7 +29,8 @@
 					$status = editProduct($user);
 					}else
 					{ 
-					$user = [
+					$user = [   
+						        'id' => $id,
 								'username'=> $username, 
 								'bprice'=>$bprice, 
 								'sprice'=> $sprice, 

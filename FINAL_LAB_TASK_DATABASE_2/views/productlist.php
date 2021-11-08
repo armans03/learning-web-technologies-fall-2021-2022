@@ -28,7 +28,7 @@
 	<?php  
 		$result = getAllproducts();
 		while ($user = mysqli_fetch_assoc($result)) { 
-			$profit = $user['selling price'] - $user['buying price'];
+			$profit = $user['sprice'] - $user['bprice'];
 	?>
 		<tr>
 			<td><?= $user['id'] ?></td>
@@ -36,7 +36,7 @@
 			<td><?= $profit ?></td>
 			<td>
 				<a href="edit.php?id=<?= $user['id'] ?>"> EDIT</a> | 
-				<a href="../controller/delete.php?id=<?= $user['id'] ?>"> DELETE</a> 
+				<a href="delete.php?id=<?= $user['id'] ?>"> DELETE</a> 
 			</td>
 		</tr>
 	<?php } ?>

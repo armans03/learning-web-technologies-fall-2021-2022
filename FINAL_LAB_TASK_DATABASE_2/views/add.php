@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<title>Create New User</title>
+	<title>ADD Product</title>
 </head>
 <body>
 	<center>	

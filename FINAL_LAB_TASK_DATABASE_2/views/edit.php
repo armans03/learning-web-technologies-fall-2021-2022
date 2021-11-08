@@ -33,11 +33,11 @@
 				</tr>
 				<tr>
 					<td>Buying Price:</td>
-					<td><input type="text" name="bprice" value="<?= $user['buying price'] ?>"></td>
+					<td><input type="text" name="bprice" value="<?= $user['bprice'] ?>"></td>
 				</tr>
 				<tr>
 					<td>Selling Price:</td>
-					<td><input type="text" name="sprice" value="<?= $user['selling price'] ?>"> <br><hr></td>
+					<td><input type="text" name="sprice" value="<?= $user['sprice'] ?>"> <br><hr></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="type" value="display"> Display <br><hr></td>
