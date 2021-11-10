@@ -1,0 +1,41 @@
+.d1{
+	/*margin: 20px 5px 25px 10px;	*/
+    margin: 20px;
+	background: white;
+	width: 380px;
+	height: 480px;
+	border: 2px solid #000;
+	border-radius: 10px;
+}
+.inner {
+	margin: 10px;
+}
+#d3{
+	margin: 20px 5px 25px 500px;	
+    
+	background: white;
+	width: 380px;
+	height: 480px;
+	border: 2px solid #000;
+	border-radius: 10px;
+
+}
+
+
+.top {
+  width: 380px;
+  height: 100px;
+  border-radius: 5px 5px 0px 0px;
+}
+.bottom{
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+}
+.inner {
+	margin: 10px;
+}
+
+body {
+  background-color: black;
+}
