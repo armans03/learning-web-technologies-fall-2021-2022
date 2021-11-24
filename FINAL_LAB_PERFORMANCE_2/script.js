@@ -13,6 +13,21 @@ function btnf(operand){
   document.getElementById('result').innerHTML = "";
 }
 
+function btnDot(){
+  document.getElementById('result').innerHTML += ".";
+}
+
+function clean(){
+ /* document.getElementById('resultPrev').innerHTML = "";
+  document.getElementById('operand').innerHTML = "";*/
+  document.getElementById('result').innerHTML = "";
+}
+function cleanAll(){
+  document.getElementById('resultPrev').innerHTML = "";
+  document.getElementById('operand').innerHTML = "";
+  document.getElementById('result').innerHTML = "";
+}
+
 function cal(){
 
   let num1 = document.getElementById('resultPrev').innerHTML;

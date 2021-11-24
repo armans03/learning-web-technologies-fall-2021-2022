@@ -6,21 +6,21 @@ $op = $_POST['operand'];
 
 
 switch ($op) {
+	case '+':
+		$res = (float)$no1 + (float)$no2;
+		echo $res;
+		break;
 	case '-':
-		$res = $no1-$no2;
+		$res = (float)$no1 - (float)$no2;
         echo $res;
 		break;
 	case '*':
-		$res = $no1*$no2;
+		$res = (float)$no1 * (float)$no2;
         echo $res;
 		break;
 	case '/':
-		$res = $no1/$no2;
+		$res = (float)$no1 / (float)$no2;
         echo $res;
-		break;
-	case '+':
-		$res = $no1+$no2;
-		echo $res;
 		break;
 
 }
